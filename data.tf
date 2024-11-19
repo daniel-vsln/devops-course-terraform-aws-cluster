@@ -44,21 +44,10 @@ data "aws_iam_policy_document" "this_assume_role" {
 
 data "aws_ami" "this" {
   most_recent = true
-  owners      = ["591542846629"]
-
+  owners      = ["amazon"]
   filter {
     name   = "name"
-    values = ["amzn2-ami-ecs-hvm-*"]
-  }
-
-  filter {
-    name   = "root-device-type"
-    values = ["ebs"]
-  }
-
-  filter {
-    name   = "virtualization-type"
-    values = ["hvm"]
+    values = ["amzn2-ami-kernel-5.10-hvm-*-arm64-gp2"]
   }
 }
 
