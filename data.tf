@@ -47,17 +47,15 @@ data "aws_ami" "this" {
   owners      = ["591542846629"]
 
   filter {
-    name   = "architecture"
-    values = ["arm64"]
-  }
-  filter {
     name   = "name"
-    values = ["al2023-ami-2023*"]
+    values = ["amzn2-ami-ecs-hvm-*"]
   }
+
   filter {
     name   = "root-device-type"
     values = ["ebs"]
   }
+
   filter {
     name   = "virtualization-type"
     values = ["hvm"]
