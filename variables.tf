@@ -7,7 +7,7 @@ variable "environment" {
 }
 
 variable "instance_type" {
-  default = "t3.medium"
+  default = "t4g.nano"
   type    = string
 }
 
