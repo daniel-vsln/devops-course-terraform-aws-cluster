@@ -114,7 +114,7 @@ resource "aws_lb_target_group" "service" {
 
   tags = {
     Cluster   = "${var.name}-${var.environment}"
-    Name      = "fem-eci-service-${var.environment}"
+    Name      = "devops-course-service-${var.environment}"
     Network   = var.vpc_name
     Terraform = "terraform-aws-cluster"
   }
